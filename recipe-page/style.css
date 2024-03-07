@@ -1,0 +1,263 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+
+/* Start Variabels */
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+/* End Variabels */
+
+/* Start Global */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Eggshell);
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+}
+
+h1,
+h2 {
+    font-family: "Young Serif", serif;
+    font-weight: 400;
+}
+
+h2 {
+    color: var(--Nutmeg);
+    font-size: 28px;
+}
+
+.container {
+    padding: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 52.5%;
+    background-color: var(--White);
+    border-radius: 20px;
+}
+
+/* End Global */
+
+/* Start Header */
+.header img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* End Header */
+
+/* Start Section-one */
+.section-one h1 {
+    color: var(--Dark-Charcoal);
+    font-size: 37px;
+}
+
+.section-one p {
+    margin-top: -10px;
+    font-size: 15px;
+    color: var(--Wenge-Brown);
+}
+
+.section-one .time {
+    background-color: var(--Rose-White);
+    padding: 15px;
+    border-radius: 15px;
+    line-height: 0.5;
+    margin: 30px 0;
+}
+
+.time h3 {
+    color: var(--Dark-Raspberry);
+    font-size: 20px;
+}
+
+.time ul,
+.section-two ul {
+    padding-left: 25px;
+    line-height: 2;
+}
+
+.time span {
+    color: var(--Wenge-Brown);
+    margin-left: 20px;
+    font-weight: 800;
+}
+
+.time ul li {
+    color: var(--Wenge-Brown);
+}
+
+.time li::marker {
+    color: var(--Dark-Raspberry);
+    font-size: 15px;
+}
+
+/* End Section-one */
+/* Start Section-two */
+.section-two ul {
+    list-style-type: square;
+}
+
+.section-two li span {
+    margin-left: 10px;
+    color: var(--Wenge-Brown);
+}
+
+.section-two li::marker,
+.section-three li::marker {
+    color: var(--Nutmeg);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.section-two::after,
+.section-three::after {
+    content: "";
+    width: 47%;
+    height: 1.5px;
+    background-color: var(--Light-Grey);
+    position: absolute;
+    margin: 10px 0;
+}
+
+/* End Section-two */
+/* Start Section-three */
+.section-three {
+    margin-top: 60px;
+}
+
+.section-three .item {
+    display: flex;
+    gap: 20px;
+    align-items: first baseline;
+    line-height: 1.5;
+    margin-top: -15px;
+
+}
+
+.section-three h5 {
+    color: var(--Nutmeg);
+    font-size: 15px;
+}
+
+.section-three p {
+    color: var(--Wenge-Brown);
+    margin: 0;
+
+}
+
+.section-three span {
+    color: var(--Wenge-Brown);
+    font-weight: 800;
+}
+
+/* End Section-three */
+/* Start Section-four */
+.section-four {
+    margin-top: 40px;
+}
+
+.section-four :nth-child(2) {
+    margin-top: -50px;
+}
+
+.section-four p {
+    color: var(--Wenge-Brown);
+    display: inline-block;
+}
+
+.section-four div:not(:last-child) {
+    border: none;
+    border-bottom: 2px solid var(--Light-Grey);
+}
+
+.section-four div * {
+    width: 100px;
+    margin-left: 30px;
+}
+
+.section-four span {
+    color: var(--Nutmeg);
+    font-weight: 600;
+    margin-left: 205px;
+
+}
+
+/* End Section-four */
+
+/* --------------------------------------------------------------------- */
+/* --------------------------------------------------------------------- */
+
+/* Media */
+@media only screen and (max-width: 375px) {
+
+    /* global */
+    body{
+        background-color: var(--White);
+    }
+    .container {
+        width: 100%;
+        padding: 0px;
+        border-radius: 0;
+        margin: 0;
+    }
+
+    p,
+    li {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    .section-one,
+    .section-two,
+    .section-three,
+    .section-four {
+        width: 85%;
+        margin: auto;
+    }
+
+    /* header */
+    .header img {
+        border-radius: 0px;
+    }
+
+    /* section-1 */
+    .section-one h1 {
+        font-size: 30px;
+    }
+
+    /* section-2 & section-3 */
+    .section-two::after,
+    .section-three::after {
+        width: 85%;
+
+    }
+
+    .section-two::after {
+        margin-top: -5px;
+    }
+
+    /* section-4 */
+    .section-four span {
+        margin: 10px;
+    }
+}
