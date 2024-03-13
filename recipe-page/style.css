@@ -37,7 +37,10 @@ h2 {
 
 h2 {
     color: var(--Nutmeg);
-    font-size: 28px;
+    font-size: 35px;
+}
+p{
+    font-size: 16px;
 }
 
 .container {
@@ -65,12 +68,11 @@ h2 {
 /* Start Section-one */
 .section-one h1 {
     color: var(--Dark-Charcoal);
-    font-size: 37px;
+    font-size: 43px;
 }
 
 .section-one p {
     margin-top: -10px;
-    font-size: 15px;
     color: var(--Wenge-Brown);
 }
 
@@ -148,7 +150,7 @@ h2 {
     align-items: first baseline;
     line-height: 1.5;
     margin-top: -15px;
-
+    
 }
 
 .section-three h5 {
@@ -159,12 +161,15 @@ h2 {
 .section-three p {
     color: var(--Wenge-Brown);
     margin: 0;
-
+    
 }
 
 .section-three span {
     color: var(--Wenge-Brown);
     font-weight: 800;
+}
+.section-three .div{
+    margin-top: -35px;
 }
 
 /* End Section-three */
@@ -205,7 +210,7 @@ h2 {
 /* --------------------------------------------------------------------- */
 
 /* Media */
-@media only screen and (max-width: 375px) {
+@media (min-width: 375px) and (max-width: 600px) {
 
     /* global */
     body{
