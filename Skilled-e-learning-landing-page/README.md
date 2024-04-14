@@ -20,3 +20,7 @@ To view this landing page locally:
 2. Open the index.html file in a web browser.
 
 Enjoy exploring our courses! 🌟
+
+## Photo
+
+![task](https://github.com/amira-elhosary/ZIGZAG-CS-Front-End-24/assets/148847465/156a8040-001d-4629-929d-6e54a538b543)
