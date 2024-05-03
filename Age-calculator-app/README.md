@@ -1,5 +1,5 @@
 
-Age Calculator App Style Guide
+### Age Calculator App Style Guide
 
 ## Layout
 The user interface should adapt to the following screen widths:
@@ -9,16 +9,18 @@ Desktop: 1440px
 💡 Ensure responsiveness and accessibility by testing across screen sizes from 320px to larger screens, meeting WCAG guidelines.
 
 ## Colors
-Primary
+
+# Primary
 Purple: hsl(259, 100%, 65%)
 Light Red: hsl(0, 100%, 67%)
-Neutral
+# Neutral
 White: hsl(0, 0%, 100%)
 Off White: hsl(0, 0%, 94%)
 Light Grey: hsl(0, 0%, 86%)
 Smokey Grey: hsl(0, 1%, 44%)
 Off Black: hsl(0, 0%, 8%)
-Typography
+
+## Typography
 Body Copy
 Font Size (Inputs): 32px
 Font
