@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <!-- section-one -->
+        <div class="section-one">
+            <div class="content">
+                <label for="day">DAY</label>
+                <input type="number" id="day" placeholder="DD" >
+                <p style="color: red;" class="dd"></p>
+            </div>
+            <div class="content">
+                <label for="month">MONTH</label>
+                <input type="number" id="month" placeholder="MM" >
+                <p style="color: red;" class="mm"></p>
+            </div>
+            <div class="content">
+                <label for="year">YEAR</label>
+                <input type="number" id="year" placeholder="YYYY" >
+                <p style="color: red;" class="yy"></p>
+            </div>
+        </div>
+        <!-- section-two -->
+        <div class="section-two">
+            <hr>
+            <button type="submit" class="btn" >
+                <img src="assets/icon-arrow.svg">
+            </button>
+        </div>
+        <!-- section-three -->
+        <div class="section-three">
+            <h2><span class="year">--</span>years</h2>
+            <h2><span class="month">--</span>months</h2>
+            <h2><span class="day">--</span>days</h2>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
