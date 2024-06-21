@@ -7,7 +7,7 @@ function naughtyOrNice(year) {
 
     for (let month in year) {
         for (let day in year[month]) {
-            year[month][day] == "Nice" ? nice++ : naughty++
+            year[month][day] === "Nice" ? nice++ : naughty++
         }
     }
     if (nice >= naughty) {
@@ -18,3 +18,11 @@ function naughtyOrNice(year) {
 
     }
 }
+
+let Data = {
+    January: { '1': 'Naughty', '2': 'Naughty', '31': 'Nice' },
+    February: { '1': 'Nice', '2': 'Naughty', '28': 'Nice' },
+    December: { '1': 'Nice', '2': 'Nice', '31': 'Naughty' }
+};
+
+console.log(naughtyOrNice(Data)); 
