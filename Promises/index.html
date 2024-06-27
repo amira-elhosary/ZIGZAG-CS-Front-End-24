@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+
+<body>
+    <div id="articles"></div>
+
+    <script>
+        const getData = (apiLink) => {
+            return new Promise((resolve, reject) => {
+                let myRequest = new XMLHttpRequest();
+                myRequest.onload = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        resolve(JSON.parse(this.responseText));
+                    } else {
+                        reject(Error("No Data Found"));
+                    }
+                };
+
+                myRequest.open("GET", apiLink);
+                myRequest.send();
+            });
+        };
+
+        //////////////////////////////////////////////////// Using Fetch API
+        /* const getData = async (apiLink) => {
+            try {
+                const response = await fetch(apiLink);
+                if (!response.ok) {
+                    throw new Error('No Data Found');
+                }
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                throw error;
+            }
+        }; */
+
+        getData('todos.json')
+            .then((result) => {
+                return result.slice(0, 5);
+            })
+            .then((result) => {
+                const articlesContainer = document.getElementById('articles');
+                // Create and append title and description for each of the first 5 elements
+                result.forEach((item, index) => {
+                    // Create a div for each article
+                    const articleDiv = document.createElement('div');
+
+                    // Create title element
+                    const titleElement = document.createElement('h3');
+                    titleElement.textContent = item.title;
+
+                    // Create description element
+                    const descriptionElement = document.createElement('p');
+                    descriptionElement.textContent = item.description;
+
+                    // Append title and description to the article div
+                    articleDiv.appendChild(titleElement);
+                    articleDiv.appendChild(descriptionElement);
+
+                    // Append the article div to the container
+                    articlesContainer.appendChild(articleDiv);
+                });
+            })
+            .catch((rej) => {
+                const articlesContainer = document.getElementById('articles');
+                articlesContainer.textContent = rej;
+            });
+    </script>
+</body>
+
+</html>
